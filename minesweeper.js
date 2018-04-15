@@ -4,47 +4,47 @@ document.addEventListener('DOMContentLoaded', startGame)
  var board = { 
   cells: [
   //Row Zero
-    {row: 0, col: 0, isMine:'', isMarked: "", hidden:!true, surroundingMines:''}, 
-    {row: 0, col: 1, isMine:'', isMarked: "", hidden:!true, surroundingMines:''}, 
-    {row: 0, col: 2, isMine:'', isMarked: "", hidden:!true, surroundingMines:''}, 
-    {row: 0, col: 3, isMine:'', isMarked: "", hidden:!true, surroundingMines:''},
-    {row: 0, col: 4, isMine:'', isMarked: "", hidden:!true, surroundingMines:''}, 
-    {row: 0, col: 5, isMine:'', isMarked: "", hidden:!true, surroundingMines:''},
+    {row: 0, col: 0, isMine: true, isMarked: "", hidden:!true, surroundingMines:''}, 
+    {row: 0, col: 1, isMine: true, isMarked: "", hidden:!true, surroundingMines:''}, 
+    {row: 0, col: 2, isMine: true, isMarked: "", hidden:!true, surroundingMines:''}, 
+    {row: 0, col: 3, isMine: true, isMarked: "", hidden:!true, surroundingMines:''},
+    {row: 0, col: 4, isMine: true, isMarked: "", hidden:!true, surroundingMines:''}, 
+    {row: 0, col: 5, isMine: true, isMarked: "", hidden:!true, surroundingMines:''},
   //Row One
-    {row: 1, col: 0, isMine:'', isMarked: "", hidden:!true , surroundingMines:''},
-    {row: 1, col: 1, isMine:'', isMarked: "", hidden:!true , surroundingMines:''}, 
-    {row: 1, col: 2, isMine:'', isMarked: "", hidden:!true , surroundingMines:''}, 
-    {row: 1, col: 3, isMine:'', isMarked: "", hidden:!true , surroundingMines:''},
-    {row: 1, col: 4, isMine:'', isMarked: "", hidden:!true , surroundingMines:''}, 
-    {row: 1, col: 5, isMine:'', isMarked: "", hidden:!true , surroundingMines:''},
+    {row: 1, col: 0, isMine: true, isMarked: "", hidden:!true , surroundingMines:''},
+    {row: 1, col: 1, isMine: true, isMarked: "", hidden:!true , surroundingMines:''}, 
+    {row: 1, col: 2, isMine: true, isMarked: "", hidden:!true , surroundingMines:''}, 
+    {row: 1, col: 3, isMine: true, isMarked: "", hidden:!true , surroundingMines:''},
+    {row: 1, col: 4, isMine: true, isMarked: "", hidden:!true , surroundingMines:''}, 
+    {row: 1, col: 5, isMine: true, isMarked: "", hidden:!true , surroundingMines:''},
   //Row Two
-    {row: 2, col: 0, isMine:'', isMarked: "", hidden:!true, surroundingMines:''}, 
-    {row: 2, col: 1, isMine:'', isMarked: "", hidden:!true, surroundingMines:''}, 
-    {row: 2, col: 2, isMine:'', isMarked: "", hidden:!true, surroundingMines:''}, 
-    {row: 2, col: 3, isMine:'', isMarked: "", hidden:!true, surroundingMines:''},
-    {row: 2, col: 4, isMine:'', isMarked: "", hidden:!true, surroundingMines:''}, 
-    {row: 2, col: 5, isMine:'', isMarked: "", hidden:!true, surroundingMines:''},
+    {row: 2, col: 0, isMine: true, isMarked: "", hidden:!true, surroundingMines:''}, 
+    {row: 2, col: 1, isMine: true, isMarked: "", hidden:!true, surroundingMines:''}, 
+    {row: 2, col: 2, isMine: true, isMarked: "", hidden:!true, surroundingMines:''}, 
+    {row: 2, col: 3, isMine: true, isMarked: "", hidden:!true, surroundingMines:''},
+    {row: 2, col: 4, isMine: true, isMarked: "", hidden:!true, surroundingMines:''}, 
+    {row: 2, col: 5, isMine: true, isMarked: "", hidden:!true, surroundingMines:''},
   //Row Three
-    {row: 3, col: 0, isMine:'', isMarked: "", hidden:!true, surroundingMines:''},
-    {row: 3, col: 1, isMine:'', isMarked: "", hidden:!true, surroundingMines:''}, 
-    {row: 3, col: 2, isMine:'', isMarked: "", hidden:!true, surroundingMines:''}, 
-    {row: 3, col: 3, isMine:'', isMarked: "", hidden:!true, surroundingMines:''},
-    {row: 3, col: 4, isMine:'', isMarked: "", hidden:!true, surroundingMines:''}, 
-    {row: 3, col: 5, isMine:'', isMarked: "", hidden:!true, surroundingMines:''},
+    {row: 3, col: 0, isMine: true, isMarked: "", hidden:!true, surroundingMines:''},
+    {row: 3, col: 1, isMine: true, isMarked: "", hidden:!true, surroundingMines:''}, 
+    {row: 3, col: 2, isMine: true, isMarked: "", hidden:!true, surroundingMines:''}, 
+    {row: 3, col: 3, isMine: true, isMarked: "", hidden:!true, surroundingMines:''},
+    {row: 3, col: 4, isMine: true, isMarked: "", hidden:!true, surroundingMines:''}, 
+    {row: 3, col: 5, isMine: true, isMarked: "", hidden:!true, surroundingMines:''},
   //Row Four
-    {row: 4, col: 0, isMine:'', isMarked: "", hidden:!true, surroundingMines:''},
-    {row: 4, col: 1, isMine:'', isMarked: "", hidden:!true, surroundingMines:''}, 
-    {row: 4, col: 2, isMine:'', isMarked: "", hidden:!true, surroundingMines:''}, 
-    {row: 4, col: 3, isMine:'', isMarked: "", hidden:!true, surroundingMines:''},
-    {row: 4, col: 4, isMine:'', isMarked: "", hidden:!true, surroundingMines:''}, 
-    {row: 4, col: 5, isMine:'', isMarked: "", hidden:!true, surroundingMines:''},
+    {row: 4, col: 0, isMine: true, isMarked: "", hidden:!true, surroundingMines:''},
+    {row: 4, col: 1, isMine: true, isMarked: "", hidden:!true, surroundingMines:''}, 
+    {row: 4, col: 2, isMine: true, isMarked: "", hidden:!true, surroundingMines:''}, 
+    {row: 4, col: 3, isMine: true, isMarked: "", hidden:!true, surroundingMines:''},
+    {row: 4, col: 4, isMine: true, isMarked: "", hidden:!true, surroundingMines:''}, 
+    {row: 4, col: 5, isMine: true, isMarked: "", hidden:!true, surroundingMines:''},
   //Row Five
-    {row: 5, col: 0, isMine:'', isMarked: "", hidden:!true, surroundingMines:''},
-    {row: 5, col: 1, isMine:'', isMarked: "", hidden:!true, surroundingMines:''},
-    {row: 5, col: 2, isMine:'', isMarked: "", hidden:!true, surroundingMines:''},
-    {row: 5, col: 3, isMine:'', isMarked: "", hidden:!true, surroundingMines:''},
-    {row: 5, col: 4, isMine:'', isMarked: "", hidden:!true, surroundingMines:''},
-    {row: 5, col: 5, isMine:'', isMarked: "", hidden:!true, surroundingMines:''},
+    {row: 5, col: 0, isMine: true, isMarked: "", hidden:!true, surroundingMines:''},
+    {row: 5, col: 1, isMine: true, isMarked: "", hidden:!true, surroundingMines:''},
+    {row: 5, col: 2, isMine: true, isMarked: "", hidden:!true, surroundingMines:''},
+    {row: 5, col: 3, isMine: true, isMarked: "", hidden:!true, surroundingMines:''},
+    {row: 5, col: 4, isMine: true, isMarked: "", hidden:!true, surroundingMines:''},
+    {row: 5, col: 5, isMine: true, isMarked: "", hidden:!true, surroundingMines:''},
     ]
  }
   
@@ -58,8 +58,8 @@ for (var i = 0; i <board.cells.length; i++){
 board.cells[i].surroundingMines = countSurroundingMines(board.cells[i]);
  }
   lib.initBoard()
-  document.addEventListener(checkForWin);
-  document.addEventListener(checkForWin); 
+  document.addEventListener('click', checkForWin);
+  document.addEventListener('Mouseenter', checkForWin); 
 }
 // Define this function to look for a win condition:
 // 1. Are all of the cells that are NOT mines visible?
