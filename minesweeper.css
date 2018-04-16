@@ -30,7 +30,7 @@ body {
   font-size: 2rem;
   width: 75px;
   height: 75px;
-  border: 1px #ccc dotted;
+  border: 1px black solid;
   border-radius: 10%;
   background-color: white;
   margin: 3px;
